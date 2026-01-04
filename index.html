@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Up Center Nepal | Charibazar</title>
+    <meta name="description"
+        content="Fastest Top Up Service in Nepal for Free Fire, PUBG, and Garena Shells. Pay via eSewa, Khalti, IME Pay.">
+
+    <!-- CSS: Local Build -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Google Fonts: Inter (Clean, legible) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Custom scrollbar for horizontal pills */
+        .hide-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Smooth fade for grid items */
+        .fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <script>
+        // Check for saved theme preference or system preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+
+<body
+    class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased flex flex-col min-h-screen pb-16 md:pb-0 transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav
+        class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.reload()">
+                    <img src="https://res.cloudinary.com/charibazar/image/upload/v1767447202/Asset-7_300x_qdmdoq.png"
+                        alt="Charibazar Logo" class="h-8 w-auto select-none" loading="eager" />
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="https://charibazar.com"
+                        class="text-slate-600 dark:text-slate-300 hover:text-brand-red dark:hover:text-brand-red font-medium transition">Home</a>
+                    <a href="#"
+                        class="text-slate-600 dark:text-slate-300 hover:text-brand-red dark:hover:text-brand-red font-medium transition">Support</a>
+
+                    <!-- Desktop Theme Toggle -->
+                    <button onclick="toggleTheme()"
+                        class="p-2 rounded-full text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 transition">
+                        <i class="fa-solid fa-moon dark:hidden"></i>
+                        <i class="fa-solid fa-sun hidden dark:block text-yellow-400"></i>
+                    </button>
+
+                    <a href="#"
+                        class="px-4 py-2 bg-slate-900 dark:bg-brand-red text-white rounded-full font-medium hover:bg-slate-800 dark:hover:bg-red-700 transition shadow-sm">
+                        Login
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden gap-4">
+                    <!-- Mobile Theme Toggle -->
+                    <button onclick="toggleTheme()"
+                        class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white p-2 focus:outline-none">
+                        <i class="fa-solid fa-moon dark:hidden"></i>
+                        <i class="fa-solid fa-sun hidden dark:block text-yellow-400"></i>
+                    </button>
+
+                    <button onclick="toggleMobileMenu()"
+                        class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white p-2 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl" id="mobile-menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 absolute w-full left-0 top-16 shadow-lg z-40 transition-colors duration-300">
+            <div class="px-4 pt-4 pb-6 space-y-3">
+                <a href="https://charibazar.com"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:text-brand-red hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Home</a>
+                <a href="#"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:text-brand-red hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Support</a>
+                <a href="#"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:text-brand-red hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Login</a>
+                <a href="#"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:text-brand-red hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Track
+                    Order</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-slate-900 relative overflow-hidden">
+        <!-- Abstract Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 100 C 20 0 50 0 100 100 Z" fill="white" />
+            </svg>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 py-12 sm:py-16 sm:px-6 lg:px-8 text-center sm:text-left">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="max-w-2xl">
+                    <div
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-brand-red/20 text-brand-red text-sm font-semibold mb-4 border border-brand-red/30">
+                        <span class="flex h-2 w-2 rounded-full bg-brand-red mr-2 animate-pulse"></span>
+                        Instant Delivery Available
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+                        Top Up Center <span class="text-brand-red">Nepal</span>
+                    </h1>
+                    <p class="text-slate-400 text-lg mb-6 max-w-lg mx-auto sm:mx-0">
+                        The most trusted platform for game credits in Nepal. 100% legitimate, secure, and fast delivery
+                        directly to your account.
+                    </p>
+
+                    <!-- Trust Bullets -->
+                    <div
+                        class="flex flex-wrap justify-center sm:justify-start gap-4 text-sm font-medium text-slate-300">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-bolt text-yellow-400"></i> Instant Delivery
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-shield-halved text-green-400"></i> Secure Pay
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-headset text-blue-400"></i> 24/7 Support
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Search (Prominent) -->
+                <div
+                    class="w-full max-w-md bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-xl">
+                    <label for="hero-search" class="block text-sm font-medium text-white mb-2">Find your game</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fa-solid fa-magnifying-glass text-slate-400"></i>
+                        </div>
+                        <input type="text" id="hero-search"
+                            class="block w-full pl-10 pr-3 py-3 border-none rounded-xl bg-white text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-red shadow-sm"
+                            placeholder="Search Free Fire, PUBG, Shells...">
+                    </div>
+                    <div class="mt-3 text-xs text-slate-400">
+                        Popular: <span class="text-white cursor-pointer hover:underline"
+                            onclick="setSearch('Diamond')">Diamonds</span>, <span
+                            class="text-white cursor-pointer hover:underline" onclick="setSearch('UC')">UC</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full -mt-6 z-10 relative">
+
+        <!-- Category Filters (Sticky under nav if scrolled, but handled via JS/CSS structure) -->
+        <div
+            class="bg-white dark:bg-slate-900 rounded-xl shadow-lg border border-slate-100 dark:border-slate-800 p-2 mb-8 transition-colors duration-300">
+            <div class="flex space-x-2 overflow-x-auto hide-scroll pb-1 sm:pb-0" id="category-container">
+                <!-- Categories injected via JS -->
+            </div>
+        </div>
+
+        <!-- Section Title -->
+        <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white transition-colors">Featured Top Ups</h2>
+            <div class="text-sm text-slate-500 dark:text-slate-400 hidden sm:block transition-colors">Showing <span
+                    id="count-display">0</span> items</div>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="product-grid"
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-6 pb-12">
+            <!-- Products injected via JS -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="hidden text-center py-20">
+            <div
+                class="bg-slate-100 dark:bg-slate-800 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors">
+                <i class="fa-solid fa-ghost text-4xl text-slate-400"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white transition-colors">No results found</h3>
+            <p class="text-slate-500 dark:text-slate-400 mb-4 transition-colors">Try searching for "Diamonds" or
+                "Shells"</p>
+            <button onclick="resetFilters()" class="text-brand-red font-semibold hover:underline">Clear all
+                filters</button>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer
+        class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pt-12 pb-8 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div
+                            class="w-8 h-8 bg-brand-red rounded-lg flex items-center justify-center text-white font-bold">
+                            C</div>
+                        <span
+                            class="font-bold text-xl text-slate-900 dark:text-white transition-colors">Charibazar</span>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed transition-colors">
+                        The easiest way to top up games in Nepal. Official reseller, secure payments, and instant
+                        delivery.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-4 transition-colors">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400 transition-colors">
+                        <li><a href="#" class="hover:text-brand-red dark:hover:text-brand-red">My Account</a></li>
+                        <li><a href="#" class="hover:text-brand-red dark:hover:text-brand-red">Track Order</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=9779844466886"
+                                class="hover:text-brand-red dark:hover:text-brand-red">Help Center</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-4 transition-colors">Legal</h4>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400 transition-colors">
+                        <li><a href="#" class="hover:text-brand-red">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-brand-red">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-brand-red">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-4 transition-colors">We Accept</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <!-- Payment Badges (CSS simulated for lightness) -->
+                        <span
+                            class="px-3 py-1 rounded bg-partner-esewa/10 text-partner-esewa font-bold text-xs border border-partner-esewa/20">eSewa</span>
+                        <span
+                            class="px-3 py-1 rounded bg-partner-khalti/10 text-partner-khalti font-bold text-xs border border-partner-khalti/20">Khalti</span>
+                        <span
+                            class="px-3 py-1 rounded bg-partner-ime/10 text-partner-ime font-bold text-xs border border-partner-ime/20">IME
+                            Pay</span>
+                        <span
+                            class="px-3 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold text-xs border border-slate-200 dark:border-slate-700">Bank</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-xs text-slate-400">&copy; 2025 Charibazar. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0 text-slate-400">
+                    <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // --- DATA SOURCE ---
+        // Edit this array to add/remove products. 
+        // Image logic: Using SVG placeholders for demo. Replace `iconSvg` with `imageUrl: 'path/to/image.jpg'` for real images.
+
+        const products = [
+            // FREE FIRE
+            {
+                id: 'ff-uid',
+                title: 'Free Fire Top Up',
+                subtitle: 'Via Player ID (UID)',
+                category: 'free-fire',
+                badge: 'Best Seller',
+                badgeColor: 'bg-yellow-100 text-yellow-800',
+                price: 'From Rs. 110',
+                href: 'https://charibazar.com/product/free-fire-uid-top-up/',
+                imageUrl: 'https://res.cloudinary.com/charibazar/image/upload/v1705996643/FreeFire-Charibazar-1-1_2002cb715.png'
+            },
+            {
+                id: 'ff-weekly',
+                title: 'Weekly Membership',
+                subtitle: 'Lite & Regular',
+                category: 'free-fire',
+                badge: 'Value',
+                badgeColor: 'bg-green-100 text-green-800',
+                price: 'Rs. 220',
+                href: 'https://charibazar.com/product/subscription/',
+                imageUrl: 'https://res.cloudinary.com/charibazar/image/upload/v1705996643/FreeFire-Charibazar-1-1_2002cb715.png'
+            },
+            {
+                id: 'ff-level',
+                title: 'Level Up Pass',
+                subtitle: 'Instant Delivery',
+                category: 'free-fire',
+                badge: '-80% OFF',
+                badgeColor: 'bg-brand-red text-white',
+                price: 'Rs. 90',
+                href: 'https://charibazar.com/product/level-up-pass/',
+                imageUrl: 'https://res.cloudinary.com/charibazar/image/upload/v1767506671/Charibazar-level-up_55267821b0_hs9rtz.png'
+            },
+            {
+                id: 'ff-100',
+                title: 'Small Pack Diamonds',
+                subtitle: 'Direct UID Topup',
+                category: 'free-fire',
+                price: 'Rs. 30',
+                href: 'https://charibazar.com/product/free-fire-uid-top-up/',
+                imageUrl: 'https://res.cloudinary.com/charibazar/image/upload/v1767506479/unnamed_sj4fyb.webp'
+            },
+
+            // PUBG
+            {
+                id: 'pubg-uc',
+                title: 'PUBG Mobile UC',
+                subtitle: 'Global Top Up',
+                category: 'pubg',
+                badge: 'Popular',
+                badgeColor: 'bg-slate-800 text-white',
+                price: 'From Rs. 149',
+                href: 'https://charibazar.com/product/pubg-mobile-uc/',
+                imageUrl: 'https://res.cloudinary.com/charibazar/image/upload/v1767458723/Charibazar%20Assets/PUBG-Charibazar-1_198273152.png'
+            },
+            {
+                id: 'ntc-ff',
+                title: 'NTC Free Fire Top Up',
+                subtitle: 'NTC Top Up',
+                category: 'free-fire',
+                price: 'From Rs. 130',
+                href: 'https://charibazar.com/product/free-fire-ntc-topup/',
+                imageUrl: 'https://res.cloudinary.com/charibazar/image/upload/v1767458697/Charibazar%20Assets/Pay-via-Recharge-New.png'
+            },
+
+            // GARENA
+            {
+                id: 'garena-shells',
+                title: 'Garena Shells',
+                subtitle: 'Undawn / CODM',
+                category: 'garena',
+                badge: 'Official',
+                badgeColor: 'bg-red-100 text-red-800',
+                price: 'Coming Soon',
+                href: 'https://charibazar.com/product/garena-shells-nepal/',
+                iconClass: 'fa-solid fa-shell text-red-600'
+            },
+
+            // OTHERS / CARDS
+            {
+                id: 'google-play',
+                title: 'Google Play Card',
+                subtitle: 'US Region',
+                category: 'gift-cards',
+                price: 'Coming Soon',
+                href: '#',
+                iconClass: 'fa-brands fa-google-play text-green-500'
+            },
+            {
+                id: 'netflix',
+                title: 'Netflix Gift Card',
+                subtitle: 'Coming Soon',
+                category: 'gift-cards',
+                price: 'Various',
+                href: '#',
+                iconClass: 'fa-solid fa-n text-red-600'
+            },
+            {
+                id: 'roblox',
+                title: 'Roblox Robux',
+                subtitle: 'Digital Code',
+                category: 'others',
+                price: 'Coming Soon',
+                href: '#',
+                iconClass: 'fa-solid fa-shapes text-slate-700'
+            },
+
+            // MOBILE LEGENDS
+            {
+                id: 'ml-global',
+                title: 'Mobile Legends',
+                subtitle: 'Diamonds Top Up',
+                category: 'mobile-legends',
+                badge: 'Hot',
+                badgeColor: 'bg-orange-100 text-orange-800',
+                price: 'From Rs. 100',
+                href: 'https://charibazar.com/product/mobile-legends/',
+                iconClass: 'fa-solid fa-mobile-screen-button text-blue-500'
+            },
+            {
+                id: 'ml-5-dia',
+                title: '5 Diamonds',
+                subtitle: 'Instant',
+                category: 'mobile-legends',
+                price: 'Rs. 15',
+                href: 'https://charibazar.com/mobile-legends/5-diamonds-%e2%9a%a1/',
+                iconClass: 'fa-regular fa-gem text-blue-400'
+            },
+            {
+                id: 'ml-11-dia',
+                title: '10+1 Diamonds',
+                subtitle: 'Bonus Pack',
+                category: 'mobile-legends',
+                price: 'Rs. 30',
+                href: 'https://charibazar.com/mobile-legends/10-1-diamonds-%e2%9a%a1/',
+                iconClass: 'fa-regular fa-gem text-blue-400'
+            },
+
+            // FREE FIRE (Additional)
+            {
+                id: 'ff-less',
+                title: 'Less is More',
+                subtitle: 'Special Event',
+                category: 'free-fire',
+                price: 'Various',
+                href: 'https://charibazar.com/product/less-is-more/',
+                iconClass: 'fa-solid fa-percentage text-brand-red'
+            },
+            {
+                id: 'ff-airdrop',
+                title: 'Air Drop Top Up',
+                subtitle: 'Event Special',
+                category: 'free-fire',
+                price: 'Promo',
+                href: 'https://charibazar.com/product/free-fire-2-air-drop-top-up/',
+                iconClass: 'fa-solid fa-box-open text-brand-red'
+            },
+            {
+                id: 'ff-login',
+                title: 'Free Fire',
+                subtitle: 'Login Top Up',
+                category: 'free-fire',
+                price: 'Low Price',
+                href: 'https://charibazar.com/product/free-fire-login/',
+                iconClass: 'fa-solid fa-right-to-bracket text-slate-600'
+            },
+            {
+                id: 'ff-2770',
+                title: '2770 Diamonds',
+                subtitle: 'Big Pack',
+                category: 'free-fire',
+                price: 'High Value',
+                href: 'https://charibazar.com/free-fire/2770-diamonds-%f0%9f%92%8e/',
+                iconClass: 'fa-regular fa-gem text-brand-red'
+            },
+
+            // BOOKS
+            {
+                id: 'book-cheese',
+                title: 'Who Moved My Cheese',
+                subtitle: 'Spencer Johnson',
+                category: 'books',
+                price: 'Rs. 350',
+                href: 'https://charibazar.com/product/who-moved-my-cheese-by-spencer-johnson/',
+                iconClass: 'fa-solid fa-book text-emerald-600'
+            },
+            {
+                id: 'book-mba',
+                title: 'The Personal MBA',
+                subtitle: 'Josh Kaufman',
+                category: 'books',
+                price: 'Rs. 850',
+                href: 'https://charibazar.com/product/the-personal-mba-by-josh-kaufman/',
+                iconClass: 'fa-solid fa-book text-emerald-600'
+            },
+            {
+                id: 'book-grow-rich',
+                title: 'Think and Grow Rich',
+                subtitle: 'Napoleon Hill',
+                category: 'books',
+                badge: 'Classic',
+                badgeColor: 'bg-yellow-100 text-yellow-800',
+                price: 'Rs. 400',
+                href: 'https://charibazar.com/product/think-and-grow-rich-by-napoleon-hill/',
+                iconClass: 'fa-solid fa-book text-emerald-600'
+            },
+            {
+                id: 'book-lean',
+                title: 'The Lean Startup',
+                subtitle: 'Eric Ries',
+                category: 'books',
+                price: 'Rs. 500',
+                href: 'https://charibazar.com/product/the-lean-startup-by-eric-ries/',
+                iconClass: 'fa-solid fa-book text-emerald-600'
+            },
+            {
+                id: 'book-power',
+                title: '48 Laws of Power',
+                subtitle: 'Robert Greene',
+                category: 'books',
+                price: 'Rs. 600',
+                href: 'https://charibazar.com/product/the-48-laws-of-power-small-size-by-robert-greene/',
+                iconClass: 'fa-solid fa-book text-emerald-600'
+            },
+            {
+                id: 'book-investor',
+                title: 'The Intelligent Investor',
+                subtitle: 'Benjamin Graham',
+                category: 'books',
+                price: 'Rs. 750',
+                href: 'https://charibazar.com/product/the-intelligent-investor-by-benjamin-graham/',
+                iconClass: 'fa-solid fa-book text-emerald-600'
+            },
+            {
+                id: 'book-magic',
+                title: 'Magic of Thinking Big',
+                subtitle: 'David J. Schwartz',
+                category: 'books',
+                price: 'Rs. 450',
+                href: 'https://charibazar.com/product/the-magic-of-thinking-big-by-david-j-schwartz/',
+                iconClass: 'fa-solid fa-book text-emerald-600'
+            },
+            {
+                id: 'book-rework',
+                title: 'Rework',
+                subtitle: 'Fried & Hansson',
+                category: 'books',
+                price: 'Rs. 400',
+                href: 'https://charibazar.com/product/rework-by-jason-fried-and-david-heinemeier-hansson/',
+                iconClass: 'fa-solid fa-book text-emerald-600'
+            },
+            {
+                id: 'book-golden',
+                title: 'Golden Rules',
+                subtitle: 'Napoleon Hill',
+                category: 'books',
+                price: 'Rs. 300',
+                href: 'https://charibazar.com/product/golden-rules-by-nepoleon-hill/',
+                iconClass: 'fa-solid fa-book text-emerald-600'
+            },
+
+            // ELECTRONICS
+            {
+                id: 'elec-bp',
+                title: 'BP Monitors',
+                subtitle: 'Health Care',
+                category: 'electronics',
+                price: 'Check Price',
+                href: 'https://charibazar.com/category/electronics/health-care-appliances/bp-monitors/',
+                iconClass: 'fa-solid fa-heart-pulse text-rose-500'
+            },
+            {
+                id: 'elec-mouse',
+                title: 'Mouse',
+                subtitle: 'Computer Accessories',
+                category: 'electronics',
+                price: 'Check Price',
+                href: 'https://charibazar.com/category/electronics/computer-accessories-electronics/mouse/',
+                iconClass: 'fa-solid fa-computer-mouse text-sky-600'
+            }
+        ];
+
+        // Categories Configuration
+        const categories = [
+            { id: 'all', label: 'All Games', icon: 'fa-solid fa-gamepad' },
+            { id: 'free-fire', label: 'Free Fire', icon: 'fa-solid fa-fire' },
+            { id: 'pubg', label: 'PUBG', icon: 'fa-solid fa-crosshairs' },
+            { id: 'garena', label: 'Garena', icon: 'fa-solid fa-star' },
+            { id: 'mobile-legends', label: 'Mobile Legends', icon: 'fa-solid fa-mobile-screen-button' },
+            { id: 'books', label: 'Books', icon: 'fa-solid fa-book' },
+            { id: 'electronics', label: 'Electronics', icon: 'fa-solid fa-plug' },
+            { id: 'gift-cards', label: 'Gift Cards', icon: 'fa-solid fa-gift' }
+        ];
+
+        // State
+        let activeCategory = 'all';
+        let searchQuery = '';
+
+        // --- RENDER FUNCTIONS ---
+
+        function renderCategories() {
+            const container = document.getElementById('category-container');
+            container.innerHTML = categories.map(cat => {
+                const isActive = activeCategory === cat.id;
+                const baseClass = "flex-shrink-0 px-5 py-2 rounded-full font-medium text-sm transition-all duration-200 cursor-pointer border flex items-center gap-2 select-none";
+                const activeClass = "bg-slate-900 text-white border-slate-900 shadow-md transform scale-105 dark:bg-brand-red dark:border-brand-red";
+                const inactiveClass = "bg-white text-slate-600 border-slate-200 hover:bg-slate-50 hover:border-slate-300 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700 dark:hover:bg-slate-700";
+
+                return `
+                    <button 
+                        onclick="setCategory('${cat.id}')"
+                        class="${baseClass} ${isActive ? activeClass : inactiveClass}">
+                        <i class="${cat.icon}"></i> ${cat.label}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function renderProducts() {
+            const grid = document.getElementById('product-grid');
+            const emptyState = document.getElementById('empty-state');
+            const countDisplay = document.getElementById('count-display');
+
+            // Filter Logic
+            const filtered = products.filter(p => {
+                const matchesCategory = activeCategory === 'all' || p.category === activeCategory;
+                const matchesSearch = p.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    p.subtitle.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesCategory && matchesSearch;
+            });
+
+            // Update Count
+            countDisplay.innerText = filtered.length;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            } else {
+                emptyState.classList.add('hidden');
+            }
+
+            // Generate HTML
+            grid.innerHTML = filtered.map(product => {
+                return `
+                <a href="${product.href}" class="group block bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-lg hover:border-brand-red/30 dark:hover:border-brand-red/50 transition-all duration-300 hover:-translate-y-1 h-full flex flex-col fade-in">
+                    
+                    <!-- Card Header / Image Area -->
+                    <div class="relative aspect-square w-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center overflow-hidden group-hover:bg-brand-light dark:group-hover:bg-slate-800 transition-colors">
+                        
+                        <!-- Badge -->
+                        ${product.badge ? `<span class="absolute top-2 left-2 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide ${product.badgeColor || 'bg-slate-800 text-white'} shadow-sm z-10">${product.badge}</span>` : ''}
+                        
+                        <!-- Icon or Image -->
+                        ${product.imageUrl
+                        ? `<img src="${product.imageUrl}" alt="${product.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">`
+                        : `<div class="text-6xl text-slate-400 group-hover:text-brand-red group-hover:scale-110 transition-all duration-300 filter drop-shadow-sm"><i class="${product.iconClass}"></i></div>`
+                    }
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="p-4 flex flex-col flex-grow">
+                        <div class="mb-1">
+                            <h3 class="font-bold text-slate-900 dark:text-white text-sm md:text-base leading-tight group-hover:text-brand-red dark:group-hover:text-brand-red transition-colors line-clamp-2">
+                                ${product.title}
+                            </h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 truncate">${product.subtitle}</p>
+                        </div>
+                        
+                        <div class="mt-auto pt-3 flex items-center justify-between">
+                            <span class="font-bold text-slate-800 dark:text-slate-200 text-sm">${product.price}</span>
+                            <div class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 group-hover:bg-brand-red group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                `;
+            }).join('');
+        }
+
+        // --- EVENT HANDLERS ---
+
+        function setCategory(id) {
+            activeCategory = id;
+            renderCategories();
+            renderProducts();
+        }
+
+        function setSearch(term) {
+            const input = document.getElementById('hero-search');
+            input.value = term;
+            searchQuery = term;
+            renderProducts();
+
+            // Scroll to grid
+            document.getElementById('product-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function resetFilters() {
+            activeCategory = 'all';
+            searchQuery = '';
+            document.getElementById('hero-search').value = '';
+            renderCategories();
+            renderProducts();
+        }
+
+        // --- DEBUG & UI LOGIC ---
+
+        // Error Handler for Live Debugging
+        window.onerror = function (message, source, lineno, colno, error) {
+            const errorBox = document.createElement('div');
+            errorBox.style.position = 'fixed';
+            errorBox.style.top = '0';
+            errorBox.style.left = '0';
+            errorBox.style.width = '100%';
+            errorBox.style.backgroundColor = '#fef2f2';
+            errorBox.style.color = '#991b1b';
+            errorBox.style.padding = '1rem';
+            errorBox.style.zIndex = '9999';
+            errorBox.style.borderBottom = '2px solid #ef4444';
+            errorBox.style.fontFamily = 'monospace';
+            errorBox.style.fontSize = '12px';
+            errorBox.innerHTML = `<strong>JS Error:</strong> ${message} <br> <span style="color:#666">${source}:${lineno}</span><button onclick="this.parentElement.remove()" style="float:right; text-decoration:underline;">Close</button>`;
+            document.body.appendChild(errorBox);
+            return false;
+        };
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('mobile-menu-icon');
+
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
+
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        }
+
+        // Init Listeners
+        document.getElementById('hero-search').addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            renderProducts();
+        });
+
+        // Initial Render
+        renderCategories();
+        renderProducts();
+
+    </script>
+    <!-- Bottom Navigation (Mobile) -->
+    <div
+        class="fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-slate-200 md:hidden flex justify-around items-center px-2 safe-area-pb">
+        <a href="https://charibazar.com/"
+            class="flex flex-col items-center justify-center text-slate-500 hover:text-brand-red active:text-brand-red w-full h-full space-y-1 group">
+            <i class="fa-solid fa-house text-xl mb-0.5 group-hover:scale-110 transition-transform"></i>
+            <span class="text-[10px] font-medium">Home</span>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=9779844466886"
+            class="flex flex-col items-center justify-center text-slate-500 hover:text-green-500 w-full h-full space-y-1 group">
+            <i class="fa-brands fa-whatsapp text-xl mb-0.5 group-hover:scale-110 transition-transform"></i>
+            <span class="text-[10px] font-medium">Chat</span>
+        </a>
+        <a href="https://charibazar.com/my-account/orders/"
+            class="flex flex-col items-center justify-center text-slate-500 hover:text-brand-red active:text-brand-red w-full h-full space-y-1 group">
+            <i class="fa-solid fa-box-open text-xl mb-0.5 group-hover:scale-110 transition-transform"></i>
+            <span class="text-[10px] font-medium">Orders</span>
+        </a>
+        <a href="https://charibazar.com/my-account/edit-account/"
+            class="flex flex-col items-center justify-center text-slate-500 hover:text-brand-red active:text-brand-red w-full h-full space-y-1 group">
+            <i class="fa-regular fa-user text-xl mb-0.5 group-hover:scale-110 transition-transform"></i>
+            <span class="text-[10px] font-medium">Profile</span>
+        </a>
+    </div>
+
+</body>
+
+</html>

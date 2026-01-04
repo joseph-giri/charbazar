@@ -225,7 +225,8 @@
                     <ul class="space-y-2 text-sm text-slate-600">
                         <li><a href="#" class="hover:text-brand-red">My Account</a></li>
                         <li><a href="#" class="hover:text-brand-red">Track Order</a></li>
-                        <li><a href="#" class="hover:text-brand-red">Help Center</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=9779844466886"
+                                class="hover:text-brand-red">Help Center</a></li>
                     </ul>
                 </div>
 
@@ -256,7 +257,7 @@
             </div>
 
             <div class="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-xs text-slate-400">&copy; 2024 Charibazar. All rights reserved.</p>
+                <p class="text-xs text-slate-400">&copy; 2025 Charibazar. All rights reserved.</p>
                 <div class="flex space-x-4 mt-4 md:mt-0 text-slate-400">
                     <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-facebook"></i></a>
                     <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-instagram"></i></a>
@@ -292,8 +293,8 @@
                 category: 'free-fire',
                 badge: 'Value',
                 badgeColor: 'bg-green-100 text-green-800',
-                price: 'Rs. 240',
-                href: 'https://charibazar.com/product/free-fire-weekly-membership/',
+                price: 'Rs. 220',
+                href: 'https://charibazar.com/product/subscription/',
                 imageUrl: 'https://res.cloudinary.com/charibazar/image/upload/v1705996643/FreeFire-Charibazar-1-1_2002cb715.png'
             },
             {
@@ -303,18 +304,18 @@
                 category: 'free-fire',
                 badge: '-80% OFF',
                 badgeColor: 'bg-brand-red text-white',
-                price: 'Rs. 190',
+                price: 'Rs. 90',
                 href: 'https://charibazar.com/product/level-up-pass/',
-                iconClass: 'fa-solid fa-arrow-trend-up text-purple-500'
+                imageUrl: 'https://res.cloudinary.com/charibazar/image/upload/v1767506671/Charibazar-level-up_55267821b0_hs9rtz.png'
             },
             {
                 id: 'ff-100',
                 title: 'Small Pack Diamonds',
                 subtitle: 'Direct UID Topup',
                 category: 'free-fire',
-                price: 'Rs. 115',
+                price: 'Rs. 30',
                 href: 'https://charibazar.com/product/free-fire-uid-top-up/',
-                iconClass: 'fa-regular fa-gem text-cyan-400'
+                imageUrl: 'https://res.cloudinary.com/charibazar/image/upload/v1767506479/unnamed_sj4fyb.webp'
             },
 
             // PUBG
@@ -325,18 +326,18 @@
                 category: 'pubg',
                 badge: 'Popular',
                 badgeColor: 'bg-slate-800 text-white',
-                price: 'From Rs. 130',
+                price: 'From Rs. 149',
                 href: 'https://charibazar.com/product/pubg-mobile-uc/',
-                iconClass: 'fa-solid fa-parachute-box text-yellow-600'
+                imageUrl: 'https://res.cloudinary.com/charibazar/image/upload/v1767458723/Charibazar%20Assets/PUBG-Charibazar-1_198273152.png'
             },
             {
-                id: 'pubg-lite',
-                title: 'PUBG Mobile Lite',
-                subtitle: 'BC Top Up',
-                category: 'pubg',
-                price: 'From Rs. 90',
-                href: '#',
-                iconClass: 'fa-solid fa-bolt text-yellow-500'
+                id: 'ntc-ff',
+                title: 'NTC Free Fire Top Up',
+                subtitle: 'NTC Top Up',
+                category: 'free-fire',
+                price: 'From Rs. 130',
+                href: 'https://charibazar.com/product/free-fire-ntc-topup/',
+               imageUrl: 'https://res.cloudinary.com/charibazar/image/upload/v1767458697/Charibazar%20Assets/Pay-via-Recharge-New.png'
             },
 
             // GARENA
@@ -347,7 +348,7 @@
                 category: 'garena',
                 badge: 'Official',
                 badgeColor: 'bg-red-100 text-red-800',
-                price: 'From Rs. 100',
+                price: 'Coming Soon',
                 href: 'https://charibazar.com/product/garena-shells-nepal/',
                 iconClass: 'fa-solid fa-shell text-red-600'
             },
@@ -358,14 +359,14 @@
                 title: 'Google Play Card',
                 subtitle: 'US Region',
                 category: 'gift-cards',
-                price: 'From Rs. 500',
+                price: 'Coming Soon',
                 href: '#',
                 iconClass: 'fa-brands fa-google-play text-green-500'
             },
             {
                 id: 'netflix',
                 title: 'Netflix Gift Card',
-                subtitle: 'Subscription',
+                subtitle: 'Coming Soon',
                 category: 'gift-cards',
                 price: 'Various',
                 href: '#',
@@ -376,9 +377,183 @@
                 title: 'Roblox Robux',
                 subtitle: 'Digital Code',
                 category: 'others',
-                price: 'From Rs. 400',
+                price: 'Coming Soon',
                 href: '#',
                 iconClass: 'fa-solid fa-shapes text-slate-700'
+            },
+
+            // MOBILE LEGENDS
+            {
+                id: 'ml-global',
+                title: 'Mobile Legends',
+                subtitle: 'Diamonds Top Up',
+                category: 'mobile-legends',
+                badge: 'Hot',
+                badgeColor: 'bg-orange-100 text-orange-800',
+                price: 'From Rs. 100',
+                href: 'https://charibazar.com/product/mobile-legends/',
+                iconClass: 'fa-solid fa-mobile-screen-button text-blue-500'
+            },
+            {
+                id: 'ml-5-dia',
+                title: '5 Diamonds',
+                subtitle: 'Instant',
+                category: 'mobile-legends',
+                price: 'Rs. 15',
+                href: 'https://charibazar.com/mobile-legends/5-diamonds-%e2%9a%a1/',
+                iconClass: 'fa-regular fa-gem text-blue-400'
+            },
+            {
+                id: 'ml-11-dia',
+                title: '10+1 Diamonds',
+                subtitle: 'Bonus Pack',
+                category: 'mobile-legends',
+                price: 'Rs. 30',
+                href: 'https://charibazar.com/mobile-legends/10-1-diamonds-%e2%9a%a1/',
+                iconClass: 'fa-regular fa-gem text-blue-400'
+            },
+
+            // FREE FIRE (Additional)
+            {
+                id: 'ff-less',
+                title: 'Less is More',
+                subtitle: 'Special Event',
+                category: 'free-fire',
+                price: 'Various',
+                href: 'https://charibazar.com/product/less-is-more/',
+                iconClass: 'fa-solid fa-percentage text-brand-red'
+            },
+            {
+                id: 'ff-airdrop',
+                title: 'Air Drop Top Up',
+                subtitle: 'Event Special',
+                category: 'free-fire',
+                price: 'Promo',
+                href: 'https://charibazar.com/product/free-fire-2-air-drop-top-up/',
+                iconClass: 'fa-solid fa-box-open text-brand-red'
+            },
+            {
+                id: 'ff-login',
+                title: 'Free Fire',
+                subtitle: 'Login Top Up',
+                category: 'free-fire',
+                price: 'Low Price',
+                href: 'https://charibazar.com/product/free-fire-login/',
+                iconClass: 'fa-solid fa-right-to-bracket text-slate-600'
+            },
+            {
+                id: 'ff-2770',
+                title: '2770 Diamonds',
+                subtitle: 'Big Pack',
+                category: 'free-fire',
+                price: 'High Value',
+                href: 'https://charibazar.com/free-fire/2770-diamonds-%f0%9f%92%8e/',
+                iconClass: 'fa-regular fa-gem text-brand-red'
+            },
+
+            // BOOKS
+            {
+                id: 'book-cheese',
+                title: 'Who Moved My Cheese',
+                subtitle: 'Spencer Johnson',
+                category: 'books',
+                price: 'Rs. 350',
+                href: 'https://charibazar.com/product/who-moved-my-cheese-by-spencer-johnson/',
+                iconClass: 'fa-solid fa-book text-emerald-600'
+            },
+            {
+                id: 'book-mba',
+                title: 'The Personal MBA',
+                subtitle: 'Josh Kaufman',
+                category: 'books',
+                price: 'Rs. 850',
+                href: 'https://charibazar.com/product/the-personal-mba-by-josh-kaufman/',
+                iconClass: 'fa-solid fa-book text-emerald-600'
+            },
+            {
+                id: 'book-grow-rich',
+                title: 'Think and Grow Rich',
+                subtitle: 'Napoleon Hill',
+                category: 'books',
+                badge: 'Classic',
+                badgeColor: 'bg-yellow-100 text-yellow-800',
+                price: 'Rs. 400',
+                href: 'https://charibazar.com/product/think-and-grow-rich-by-napoleon-hill/',
+                iconClass: 'fa-solid fa-book text-emerald-600'
+            },
+            {
+                id: 'book-lean',
+                title: 'The Lean Startup',
+                subtitle: 'Eric Ries',
+                category: 'books',
+                price: 'Rs. 500',
+                href: 'https://charibazar.com/product/the-lean-startup-by-eric-ries/',
+                iconClass: 'fa-solid fa-book text-emerald-600'
+            },
+            {
+                id: 'book-power',
+                title: '48 Laws of Power',
+                subtitle: 'Robert Greene',
+                category: 'books',
+                price: 'Rs. 600',
+                href: 'https://charibazar.com/product/the-48-laws-of-power-small-size-by-robert-greene/',
+                iconClass: 'fa-solid fa-book text-emerald-600'
+            },
+            {
+                id: 'book-investor',
+                title: 'The Intelligent Investor',
+                subtitle: 'Benjamin Graham',
+                category: 'books',
+                price: 'Rs. 750',
+                href: 'https://charibazar.com/product/the-intelligent-investor-by-benjamin-graham/',
+                iconClass: 'fa-solid fa-book text-emerald-600'
+            },
+            {
+                id: 'book-magic',
+                title: 'Magic of Thinking Big',
+                subtitle: 'David J. Schwartz',
+                category: 'books',
+                price: 'Rs. 450',
+                href: 'https://charibazar.com/product/the-magic-of-thinking-big-by-david-j-schwartz/',
+                iconClass: 'fa-solid fa-book text-emerald-600'
+            },
+            {
+                id: 'book-rework',
+                title: 'Rework',
+                subtitle: 'Fried & Hansson',
+                category: 'books',
+                price: 'Rs. 400',
+                href: 'https://charibazar.com/product/rework-by-jason-fried-and-david-heinemeier-hansson/',
+                iconClass: 'fa-solid fa-book text-emerald-600'
+            },
+            {
+                id: 'book-golden',
+                title: 'Golden Rules',
+                subtitle: 'Napoleon Hill',
+                category: 'books',
+                price: 'Rs. 300',
+                href: 'https://charibazar.com/product/golden-rules-by-nepoleon-hill/',
+                iconClass: 'fa-solid fa-book text-emerald-600'
+            },
+
+            // ELECTRONICS
+            {
+                id: 'elec-bp',
+                title: 'BP Monitors',
+                subtitle: 'Health Care',
+                category: 'electronics',
+                price: 'Check Price',
+                href: 'https://charibazar.com/category/electronics/health-care-appliances/bp-monitors/',
+                iconClass: 'fa-solid fa-heart-pulse text-rose-500'
+            },
+            {
+                id: 'elec-mouse',
+                title: 'Mouse',
+                subtitle: 'Computer Accessories',
+                category: 'electronics',
+                price: 'Check Price',
+                href: 'https://charibazar.com/category/electronics/computer-accessories-electronics/mouse/',
+                iconClass: 'fa-solid fa-computer-mouse text-sky-600'
             }
         ];
 
@@ -388,6 +563,9 @@
             { id: 'free-fire', label: 'Free Fire', icon: 'fa-solid fa-fire' },
             { id: 'pubg', label: 'PUBG', icon: 'fa-solid fa-crosshairs' },
             { id: 'garena', label: 'Garena', icon: 'fa-solid fa-star' },
+            { id: 'mobile-legends', label: 'Mobile Legends', icon: 'fa-solid fa-mobile-screen-button' },
+            { id: 'books', label: 'Books', icon: 'fa-solid fa-book' },
+            { id: 'electronics', label: 'Electronics', icon: 'fa-solid fa-plug' },
             { id: 'gift-cards', label: 'Gift Cards', icon: 'fa-solid fa-gift' }
         ];
 
